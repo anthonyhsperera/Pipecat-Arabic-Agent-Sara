@@ -1,0 +1,26 @@
+# Core Pipecat Framework
+pipecat-ai>=0.0.47
+
+# Speech-to-Text Services
+pipecat-ai[speechmatics]
+
+# Large Language Models
+pipecat-ai[openai]
+
+# Text-to-Speech Services
+pipecat-ai[elevenlabs]
+
+# Transport Layers
+pipecat-ai[daily]  # For Daily.co WebRTC transport
+
+# Environment Configuration
+python-dotenv>=1.0.0
+
+# Logging
+loguru>=0.7.0
+
+# Optional: Additional services you might want to add
+# pipecat-ai[deepgram]  # Alternative STT service
+# pipecat-ai[azure]     # Azure AI services
+# pipecat-ai[google]    # Google Cloud services
+# pipecat-ai[cartesia]  # Alternative TTS service

@@ -1,0 +1,87 @@
+[project]
+name = "pipecat-arabic-agent-sara"
+version = "1.0.0"
+description = "An intelligent Arabic voice agent built with Pipecat for real-time conversational AI"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "BSD-2-Clause"}
+keywords = [
+    "pipecat",
+    "voice-agent",
+    "arabic",
+    "ai",
+    "speech-recognition",
+    "text-to-speech",
+    "conversational-ai",
+    "rtvi",
+    "openai",
+    "elevenlabs",
+    "speechmatics"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Communications :: Telephony",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Natural Language :: Arabic"
+]
+
+dependencies = [
+    "pipecat-ai>=0.0.47",
+    "python-dotenv>=1.0.0",
+    "loguru>=0.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/Pipecat-Arabic-Agent-Sara"
+Repository = "https://github.com/yourusername/Pipecat-Arabic-Agent-Sara"
+Issues = "https://github.com/yourusername/Pipecat-Arabic-Agent-Sara/issues"
+Documentation = "https://github.com/yourusername/Pipecat-Arabic-Agent-Sara#readme"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 100
+target-version = ['py310', 'py311', 'py312']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | venv
+  | build
+  | dist
+)/
+'''
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
