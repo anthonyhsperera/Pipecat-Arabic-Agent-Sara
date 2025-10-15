@@ -12,9 +12,15 @@ pipecat-ai[elevenlabs]
 
 # Transport Layers
 pipecat-ai[daily]  # For Daily.co WebRTC transport
+pipecat-ai[webrtc]  # For local WebRTC transport
+pipecat-ai-small-webrtc-prebuilt>=1.0.0  # WebRTC prebuilt module for Pipecat Playground
 
 # Environment Configuration
 python-dotenv>=1.0.0
+
+# Web Framework (required for WebSocket, WebRTC, and Twilio transports)
+fastapi>=0.115.6
+uvicorn>=0.34.0
 
 # Logging
 loguru>=0.7.0

@@ -130,29 +130,54 @@ ELEVENLABS_MODEL=eleven_multilingual_v2
 
 ### Running the Agent Locally
 
-Basic command to run the agent:
+**Recommended:** Use local WebRTC transport for testing with Pipecat Playground:
 
 ```bash
-python agent.py
+python agent.py --transport webrtc --port 7860
 ```
+
+The agent will be available at `http://localhost:7860`
+
+### Connect to Pipecat Playground
+
+1. **Run the Agent**: Start the agent with the command above
+2. **Open Your Browser**: Navigate to `http://localhost:7860`
+3. **Start Speaking**: Allow microphone access and start speaking in Arabic!
+
+The Pipecat WebRTC client interface will load automatically at the default port.
 
 ### Transport Options
 
 Pipecat supports multiple transport options:
 
-#### 1. Daily Transport (WebRTC)
+#### 1. WebRTC Transport (Recommended)
+**Best for:** Local testing, Pipecat Playground integration, no cloud dependencies
+
 ```bash
-python agent.py --transport daily
+python agent.py --transport webrtc --port 7860
 ```
 
-#### 2. Twilio Transport
+- Runs completely locally on your machine
+- No Daily account or room setup needed
+- Perfect for development and testing
+- Built-in WebRTC client at `http://localhost:7860`
+
+#### 2. Daily Transport
+**Best for:** Production deployments, cloud-based voice chat
+
 ```bash
-python agent.py --transport twilio
+python agent.py --transport daily --port 7860
 ```
 
-#### 3. WebRTC Transport
+- Creates Daily.co WebRTC rooms automatically
+- Requires `DAILY_API_KEY` in `.env`
+- Great for production voice applications
+
+#### 3. Twilio Transport
+**Best for:** Phone call integrations
+
 ```bash
-python agent.py --transport webrtc
+python agent.py --transport twilio --port 7860
 ```
 
 ### Command Line Arguments
