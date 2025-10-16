@@ -114,6 +114,7 @@ async def run_bot(transport: BaseTransport, runner_args: RunnerArguments):
             enable_diarization=True,
             speaker_active_format="<{speaker_id}>{text}</{speaker_id}>",
             operating_point="enhanced",
+            speaker_sensitivity=0.7,
         ),
     )
 
